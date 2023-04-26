@@ -17,4 +17,6 @@ class MainActivity : AppCompatActivity() {
         mBinding.tvText.text = "@${mBinding.tvText.text}" + if (BuildConfig.DEBUG)
             "Build Type: DEBUG" else "Build Type: Release"
     }
+
+    // new change......
 }
