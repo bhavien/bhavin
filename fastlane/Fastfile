@@ -66,16 +66,27 @@ platform :android do
         message: "Helloooooooooooo"
       )
 
-      push_to_git_remote(
-#         local_branch: buildConfigs.key(options[:buildConfig]),
+#       push_to_git_remote(
+# #         local_branch: buildConfigs.key(options[:buildConfig]),
 #         local_branch: "master",
-        local_branch: "HEAD",
-        remote: "origin",
-#         remote_branch: buildConfigs.key(options[:buildConfig]),
-        remote_branch: "master",
-        force: true,
-        tags: true,
+#         remote: "origin",
+# #         remote_branch: buildConfigs.key(options[:buildConfig]),
+#         remote_branch: "master",
+#         force: true,
+#         tags: true,
+#       )
+
+      push_to_git_remote(
+        remote: "origin",         # optional, default: "origin"
+        local_branch: "master",  # optional, aliased by "branch", default is set to current branch
+        remote_branch: "master", # optional, default is set to local_branch
+        force: true,    # optional, default: false
+        force_with_lease: true,   # optional, default: false
+        tags: false,    # optional, default: true
+        no_verify: true,# optional, default: false
+        set_upstream: true        # optional, default: false
       )
+
     end
 
 end
