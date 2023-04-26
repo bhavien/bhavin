@@ -72,7 +72,7 @@ platform :android do
         remote: "origin",
 #         remote_branch: buildConfigs.key(options[:buildConfig]),
         remote_branch: 'master',
-        tags: true,
+        tags: false,
       )
     end
 
