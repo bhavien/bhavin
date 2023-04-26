@@ -61,9 +61,8 @@ platform :android do
       git_add(path: "*")
       git_commit(
         path: "*",
-#         path: "https://github.com/bhavien/bhavin.git",
 #         message: "#" + UPDATED_VERSION_CODE + " released"
-        message: "1"
+#         message: "1"
       )
 
 
@@ -80,7 +79,7 @@ platform :android do
 #         remote_branch: 'master',
 #         tags: false,
 #       )
-# hello allllllllllllllllll
+
     end
 
 end
