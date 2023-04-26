@@ -61,13 +61,17 @@ platform :android do
       git_add(path: "*")
       git_commit(
         path: "*",
+#         path: "https://github.com/bhavien/bhavin.git",
 #         message: "#" + UPDATED_VERSION_CODE + " released"
+        message: "Helloooooooooooo"
       )
 
       push_to_git_remote(
-        local_branch: buildConfigs.key(options[:buildConfig]),
+#         local_branch: buildConfigs.key(options[:buildConfig]),
+        local_branch: "master",
         remote: "origin",
-        remote_branch: buildConfigs.key(options[:buildConfig]),
+#         remote_branch: buildConfigs.key(options[:buildConfig]),
+        remote_branch: "master",
         tags: true,
       )
     end

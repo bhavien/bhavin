@@ -23,6 +23,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Lane for distributing Release app using Firebase App Distributions
 
+### android uploadToGit
+
+```sh
+[bundle exec] fastlane android uploadToGit
+```
+
+After successful execution of all task, this block is called
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
