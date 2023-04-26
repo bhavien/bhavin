@@ -63,17 +63,20 @@ platform :android do
         path: "*",
 #         path: "https://github.com/bhavien/bhavin.git",
 #         message: "#" + UPDATED_VERSION_CODE + " released"
-        message: "Helloooooooooooo"
+        message: "1"
       )
 
-      push_to_git_remote(
-#         local_branch: buildConfigs.key(options[:buildConfig]),
-        local_branch: 'master',
-        remote: "origin",
-#         remote_branch: buildConfigs.key(options[:buildConfig]),
-        remote_branch: 'master',
-        tags: false,
-      )
+
+        push_to_git_remote()
+
+#       push_to_git_remote(
+# #         local_branch: buildConfigs.key(options[:buildConfig]),
+#         local_branch: 'master',
+#         remote: "origin",
+# #         remote_branch: buildConfigs.key(options[:buildConfig]),
+#         remote_branch: 'master',
+#         tags: false,
+#       )
     end
 
 end
