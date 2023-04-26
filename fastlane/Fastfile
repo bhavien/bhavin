@@ -78,8 +78,6 @@ platform :android do
 
       push_to_git_remote(
         remote: "origin",         # optional, default: "origin"
-        local_branch: "master",  # optional, aliased by "branch", default is set to current branch
-        tags: true,
       )
 
     end
