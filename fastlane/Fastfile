@@ -69,7 +69,7 @@ platform :android do
 
         push_to_git_remote(
             force: true,
-            force_with_lease: true,
+#             force_with_lease: true,
         )
 
 #       push_to_git_remote(
