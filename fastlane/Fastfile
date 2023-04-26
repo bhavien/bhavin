@@ -67,17 +67,13 @@ platform :android do
       )
 
       push_to_git_remote(
-        local_branch: "master"
+#         local_branch: buildConfigs.key(options[:buildConfig]),
+        local_branch: 'master',
+        remote: "origin",
+#         remote_branch: buildConfigs.key(options[:buildConfig]),
+        remote_branch: 'master',
+        tags: true,
       )
-
-#       push_to_git_remote(
-# #         local_branch: buildConfigs.key(options[:buildConfig]),
-#         local_branch: 'master',
-#         remote: "origin",
-# #         remote_branch: buildConfigs.key(options[:buildConfig]),
-#         remote_branch: 'master',
-#         tags: true,
-#       )
     end
 
 end
