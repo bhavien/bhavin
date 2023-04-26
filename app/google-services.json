@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "217528119112",
+    "firebase_url": "https://apzora-69a2e.firebaseio.com",
+    "project_id": "apzora-69a2e",
+    "storage_bucket": "apzora-69a2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217528119112:android:5176557d338e0fa7e2cd7d",
+        "android_client_info": {
+          "package_name": "com.smartcodies.cicddemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217528119112-0516dc03nep3b4se3v3nmmlrqf93ei8v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartcodies.cicddemo",
+            "certificate_hash": "45abf24f7d23c2959693cae9302be402b247d6b1"
+          }
+        },
+        {
+          "client_id": "217528119112-npstsph93vs9435268g2s5ffqtm3o3pp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD3yu3viOB8jTj5WZXOXMafTBhm9V-TFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217528119112-npstsph93vs9435268g2s5ffqtm3o3pp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
