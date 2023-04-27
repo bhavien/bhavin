@@ -1,40 +1,73 @@
-fastlane documentation
-----
+---
+created by Bhavin_Solanki
+---
 
-# Installation
 
-Make sure you have the latest version of the Xcode command line tools installed:
+--------------------------------------------  fastlane setup  -----------------------------------------------------------
 
-```sh
-xcode-select --install
-```
+# Fast Installation
 
-For _fastlane_ installation instructions, see [Installing _fastlane_](https://docs.fastlane.tools/#installing-fastlane)
+Install fastlane with following commands (You can run on studio terminal)
 
-# Available Actions
 
-## Android
+WARNING: fastlane requires your locale to be set to UTF-8.
+# export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
-### android distributeReleaseBuild
+----------------------------------------------------------------------------------------
 
-```sh
-[bundle exec] fastlane android distributeReleaseBuild
-```
+Run this command first to remove your permission error
 
-Lane for distributing Release app using Firebase App Distributions
+# - chmod +x gradlew
 
-### android uploadToGit
+Init fastlane with following command 
 
-```sh
-[bundle exec] fastlane android uploadToGit
-```
+# fastlane init
 
-After successful execution of all task, this block is called
+after hit above command you have auto-generated file Gemfile , Gemfile.lock and fastlane folder inside your main project)
+(fastlane folder contains 3 files Appfile , Fastfile , Pluginfile)
 
-----
+----------------------------------------------------------------------------------------
 
-This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
+You can also add gem as per your requirements
 
-More information about _fastlane_ can be found on [fastlane.tools](https://fastlane.tools).
+# sudo gem install fastlane -NV 
 
-The documentation of _fastlane_ can be found on [docs.fastlane.tools](https://docs.fastlane.tools).
+
+
+--------------------------------------------  fastlane setup done -----------------------------------------------------------
+
+
+
+
+
+-------------------------------------------- github commit and push code ----------------------------------------------------
+
+
+
+Add following to your fastfile 
+
+   lane :uploadToGit do
+       git_add(path: "*")
+       git_commit(
+           path: "*", 
+           message: "#" + UPDATED_VERSION_CODE + " released"  
+       )
+       push_to_git_remote(
+            remote: "origin",         # optional, default: "origin"
+            local_branch: "develop",  # optional, aliased by "branch", default is set to current branch
+            remote_branch: "develop", # optional, default is set to local_branch
+            force: true,    # optional, default: false
+            force_with_lease: true,   # optional, default: false
+            tags: false,    # optional, default: true
+            no_verify: true,# optional, default: false
+            set_upstream: true        # optional, default: false
+       )
+   end
+
+
+  - you can add parameter as you want to here checkout this doc : 
+  - [Fastlane](https://docs.fastlane.tools/actions/push_to_git_remote)
+
+
+
