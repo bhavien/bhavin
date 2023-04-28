@@ -7,9 +7,10 @@
     tools:context="com.smartcodies.cicddemo.MainActivity">
 
     <TextView
+        android:id="@+id/tvCus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Release Apk"
+        android:text="@string/new_release_apk"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tvText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,14 +21,14 @@
         android:id="@+id/tvText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="\n........CICD........\n"
+        android:gravity="center"
+        android:text="@string/cicd"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvCus"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

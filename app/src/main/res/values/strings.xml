@@ -1,3 +1,7 @@
 <resources>
+
     <string name="app_name">CicdDemo</string>
+    <string name="new_release_apk">New Release Apk</string>
+    <string name="cicd">........CICD........</string>
+
 </resources>
